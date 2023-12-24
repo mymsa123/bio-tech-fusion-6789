@@ -5,7 +5,7 @@ import {AiOutlineUser, AiOutlineShoppingCart} from 'react-icons/ai'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../redux/authSlice'
-
+import  tastyLogo from "../../assets/tastyLogo.png"
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false)
   const {products} = useSelector((state) => state.cart)
@@ -27,7 +27,7 @@ const Navbar = () => {
       <div className={classes.wrapper}>
         <div className={classes.left}>
           <Link to='/' className={classes.title}>
-            Tasty Tales
+            <img src={tastyLogo} width={"160px"} />
           </Link>
         </div>
         <div className={classes.center}>
